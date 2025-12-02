@@ -1,0 +1,9 @@
+#KONTO 1221 Inventarier
+#IB 0 1221 421457.53
+#UB 0 1221 518057.53
+#VER C 11 20210213 "Leverant�rsfakturajournal nr 69" 20210213
+{
+   #TRANS 1221 {} 96600.00
+}
+#IB -1 1221 789418.53
+#UB -1 1221 421457.53

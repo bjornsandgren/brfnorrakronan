@@ -1,0 +1,44 @@
+#SIETYP 4
+#PROGRAM "Visma Administration 2000 med Visma Integration" 2022.2
+#GEN 20230822
+#FNAMN "ôvningsbolaget AB"
+#FNR "C:\ProgramData\SPCS\SPCS Administration\Fˆretag\Ovnbol2000"
+#ORGNR 555555-5555
+#ADRESS "Siw Eriksson" "Box 1" "123 45 STORSTAD" "012-34 56 78"
+#FORMAT PC8
+#KONTO 1060 Hyresratt
+
+#KTYP 1060 T
+#SRU 1060 7201
+#KONTO 1069 "Ack avskrivn hyresratt"
+#KTYP 1069 T
+#SRU 1069 7201
+#KONTO 2081 Aktiekapital
+#KTYP 2081 S
+#SRU 2081 7301
+#KONTO 3020 "Forsaljning VMB varor"
+#KTYP 3020 I
+#SRU 3020 7410
+#KONTO 4031 "Inkop vissa varor i Sverige 25%"
+#KTYP 4031 K
+#SRU 4031 7512
+#KONTO 8910   "Skatt årets besk.bara res"
+#IB 0 1060 421457.53
+#IB 0 2081 -200000.00
+#UB 0 2081 -200000.00
+#RES 0 3020 -1690380.20
+#RES -1 8910 148846.00
+#KTYP  8910   K
+#VER A 1 20210105 Kaffebrod 20210310
+{
+   #TRANS 1060 {} -195.00
+   #TRANS 2081 {} 20.88
+   #TRANS 3020 {} 174.12
+}
+#VER A 2 20210105 Kaffebrod 20210310
+{
+   #TRANS 1060 {} -195.00
+   #TRANS 2081 {} 20.88
+   #TRANS 3020 {} 174.12
+   #TRANS 3020 {1 Nord} -3550.00
+}
