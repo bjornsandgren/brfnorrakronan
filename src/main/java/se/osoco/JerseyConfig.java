@@ -7,12 +7,14 @@ import se.osoco.api.AccountChartResource;
 import se.osoco.api.DaybookResource;
 import se.osoco.api.PingResource;
 import se.osoco.api.ReportResource;
+import se.osoco.config.CORSResponseFilter;
 
 @Component
 @ApplicationPath("/api")
 public class JerseyConfig extends ResourceConfig {
 
     public JerseyConfig() {
+        register(CORSResponseFilter.class);
         register(DaybookResource.class);
         register(AccountChartResource.class);
         register(ReportResource.class);
