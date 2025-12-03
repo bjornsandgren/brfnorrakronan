@@ -22,7 +22,7 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        this.serveDirectory(registry, "/", "classpath:/static/");
+        this.serveDirectory(registry, "/admin", "classpath:/admin/");
     }
 
     @Override
@@ -44,7 +44,6 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
                 .addResourceHandler(endpointPatterns)
                 .addResourceLocations(location.endsWith("/") ? location : location + "/")
                 .resourceChain(false)
-                // 3
                 .addResolver(new PathResourceResolver() {
                     @Override
                     public Resource resolveResource(HttpServletRequest request, String requestPath, List<? extends Resource> locations, ResourceResolverChain chain) {
