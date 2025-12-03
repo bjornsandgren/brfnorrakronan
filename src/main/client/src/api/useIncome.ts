@@ -5,7 +5,7 @@ import { setupCache } from "axios-cache-interceptor";
 import ResultReport from "../domain/ResultReport";
 import Env from "../Env";
 
-const URL = `${Env.API_BASE_URL}/report/income`;
+const URL = `${Env.API_BASE_URL}/report/income/`;
 
 const client = axios.create({
   baseURL: URL,

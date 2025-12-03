@@ -1,6 +1,5 @@
 package se.osoco.domain.reports;
 
-import org.junit.Test;
 import se.osoco.domain.Client;
 import se.osoco.domain.OrganisationNumber;
 import se.osoco.domain.Transaction;
@@ -12,7 +11,9 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * A complete test according to this: https://www.bas.se/kontoplaner/sru/

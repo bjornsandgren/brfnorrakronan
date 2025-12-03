@@ -1,6 +1,5 @@
 package se.osoco.sie;
 
-import org.junit.Test;
 import se.osoco.Application;
 import se.osoco.domain.accounting.Daybook;
 import se.osoco.domain.accounting.GeneralLedger;
@@ -11,7 +10,9 @@ import se.osoco.sie.legacy.SIE;
 import java.io.IOException;
 import java.math.BigDecimal;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 public class ExampleSIETest {
 

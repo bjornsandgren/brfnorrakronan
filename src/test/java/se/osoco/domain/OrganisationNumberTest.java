@@ -1,26 +1,29 @@
 package se.osoco.domain;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 public class OrganisationNumberTest {
 
-    @Test (expected = RuntimeException.class)
+    @Test
     public void handleNull() {
-        new OrganisationNumber(null);
+        Assertions.assertThrows(RuntimeException.class, () -> new OrganisationNumber(null));
     }
 
-    @Test (expected = RuntimeException.class)
+    @Test
     public void handleEmpty() {
-        new OrganisationNumber("");
+        Assertions.assertThrows(RuntimeException.class, () -> new OrganisationNumber(""));
     }
 
-    @Test (expected = RuntimeException.class)
+    @Test
     public void handleBlank() {
-        new OrganisationNumber(" ");
+        Assertions.assertThrows(RuntimeException.class, () -> new OrganisationNumber(" "));
     }
 
     @Test
     public void handleHyphen() {
-        OrganisationNumber organisationNumber = new OrganisationNumber("556767-2752");
+        new OrganisationNumber("556767-2752");
     }
 }

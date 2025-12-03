@@ -1,7 +1,5 @@
 package se.osoco.domain.accounting;
 
-import org.junit.Assert;
-import org.junit.Test;
 import se.osoco.domain.Client;
 import se.osoco.domain.OrganisationNumber;
 import se.osoco.domain.Verification;
@@ -10,7 +8,9 @@ import se.osoco.sie.legacy.SIE;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 public class DaybookTest {
 

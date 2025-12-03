@@ -1,29 +1,31 @@
 package se.osoco.domain.account;
 
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class AccountNumberTest {
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void handleNull() {
-        new AccountNumber(null);
+        Assertions.assertThrows(NullPointerException.class, () -> new AccountNumber(null));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void noNumber() {
-        new AccountNumber("Not a number");
+        Assertions.assertThrows(IllegalArgumentException.class, () -> new AccountNumber("Not a number"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void toFewNumbers() {
-        new AccountNumber("111");
+        Assertions.assertThrows(IllegalArgumentException.class, () -> new AccountNumber("111"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void toManyNumbers() {
-        new AccountNumber("11144");
+        Assertions.assertThrows(IllegalArgumentException.class, () -> new AccountNumber("11144"));
     }
 
     @Test

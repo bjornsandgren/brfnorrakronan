@@ -16,7 +16,7 @@ import se.osoco.sie.legacy.SIE;
 @RequestMapping(value = "/report", produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
 public class ReportResource {
 
-    @GetMapping("/balance")
+    @GetMapping("/balance/")
     public BalanceReport daybook() {
         SIE importedSIE = SIE.fromClasspathResource(SIE_FILE);
         Daybook daybook = new Daybook(importedSIE);
@@ -25,7 +25,7 @@ public class ReportResource {
         return new BalanceReport(balanceSheet);
     }
 
-    @GetMapping("/income")
+    @GetMapping("/income/")
     public IncomeReport income() {
         SIE importedSIE = SIE.fromClasspathResource(SIE_FILE);
         Daybook daybook = new Daybook(importedSIE);

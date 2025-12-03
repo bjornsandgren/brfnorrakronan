@@ -1,6 +1,5 @@
 package se.osoco.sie;
 
-import org.junit.Test;
 import se.osoco.Application;
 import se.osoco.domain.Client;
 import se.osoco.domain.OrganisationNumber;
@@ -14,7 +13,10 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
 
 public class EdisonTest {
 

@@ -1,6 +1,6 @@
 package se.osoco.domain;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.util.ResourceUtils;
 import se.osoco.domain.account.Account;
 import se.osoco.domain.accounting.Daybook;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DaybookTest {
 

@@ -1,12 +1,13 @@
 package se.osoco.domain.accounting;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
 import se.osoco.domain.account.Account;
 import se.osoco.sie.legacy.SIE;
 
 import java.math.BigDecimal;
-import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AccountingTest {
 
@@ -24,9 +25,9 @@ public class AccountingTest {
         SIE sie = SIE.fromClasspathResource("/sie/ib.se");
         Daybook daybook = new Daybook(sie);
         Account account = daybook.ledger().account(1221);
-        Assert.assertEquals("Inventarier", account.text());
-        Assert.assertEquals(new BigDecimal("421457.53"), account.openingBalance().value());
-        Assert.assertEquals(new BigDecimal("518057.53"), account.closingBalance().value());
+        assertEquals("Inventarier", account.text());
+        assertEquals(new BigDecimal("421457.53"), account.openingBalance().value());
+        assertEquals(new BigDecimal("518057.53"), account.closingBalance().value());
     }
 
     @Test
@@ -34,8 +35,8 @@ public class AccountingTest {
         SIE sie = SIE.fromClasspathResource("/sie/ib.se");
         Daybook daybook = new Daybook(sie);
         Account account = daybook.ledger().account(1221);
-        Assert.assertEquals(new BigDecimal("518057.53"), account.closingBalance().value());
-        Assert.assertEquals("518\u00A0057,53", account.closingBalance().formatted());
+        assertEquals(new BigDecimal("518057.53"), account.closingBalance().value());
+        assertEquals("518\u00A0057,53", account.closingBalance().formatted());
     }
 
     @Test
@@ -44,8 +45,8 @@ public class AccountingTest {
         Accounting accounting = new Accounting(sie);
         Daybook daybook = accounting.daybook();
         FiscalYear fiscalYear = daybook.fiscalYear();
-        Assert.assertEquals("2021-01-01", fiscalYear.start());
-        Assert.assertEquals("2021-12-31", fiscalYear.end());
+        assertEquals("2021-01-01", fiscalYear.start());
+        assertEquals("2021-12-31", fiscalYear.end());
     }
 
     @Test
@@ -53,8 +54,8 @@ public class AccountingTest {
         SIE sie = SIE.fromClasspathResource("/sie/edison.se");
         Accounting accounting = new Accounting(sie);
         Daybook daybook = accounting.daybook();
-        Assert.assertEquals(51, daybook.allVerifications().size());
-        Assert.assertEquals(2, daybook.series().size());
+        assertEquals(51, daybook.allVerifications().size());
+        assertEquals(2, daybook.series().size());
     }
 
         /*

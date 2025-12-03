@@ -1,24 +1,25 @@
 package se.osoco.sie;
 
-import org.junit.Test;
 import se.osoco.errors.FileNotFoundException;
 import se.osoco.errors.FileNotValidException;
 import se.osoco.sie.legacy.SIE;
 
 import java.time.format.DateTimeFormatter;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class SIETest {
 
-    @Test(expected = FileNotFoundException.class)
+    @Test
     public void importFileNotFound() {
-        SIE.fromClasspathResource("asdf");
+        Assertions.assertThrows(FileNotFoundException.class, () -> SIE.fromClasspathResource("asdf"));
     }
 
-    @Test(expected = FileNotValidException.class)
+    @Test
     public void importedFileNotValid() {
-        SIE.fromClasspathResource("/sie/empty.se");
+        Assertions.assertThrows(FileNotValidException.class, () -> SIE.fromClasspathResource("/sie/empty.se"));
     }
 
     @Test

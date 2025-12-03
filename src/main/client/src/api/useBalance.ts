@@ -5,7 +5,7 @@ import { setupCache } from "axios-cache-interceptor";
 import type BalanceReport from "../domain/BalanceReport";
 import Env from "../Env";
 
-const URL = `${Env.API_BASE_URL}/report/balance`;
+const URL = `${Env.API_BASE_URL}/report/balance/`;
 
 const client = axios.create({
   baseURL: URL,

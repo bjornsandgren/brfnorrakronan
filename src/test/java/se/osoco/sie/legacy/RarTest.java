@@ -1,11 +1,13 @@
 package se.osoco.sie.legacy;
 
-import org.junit.Test;
 import se.osoco.domain.formats.Formats;
 
-import java.time.format.DateTimeFormatter;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
+import org.junit.jupiter.api.Test;
 
 public class RarTest {
 

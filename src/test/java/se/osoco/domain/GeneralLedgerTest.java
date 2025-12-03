@@ -1,7 +1,8 @@
 package se.osoco.domain;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 import se.osoco.domain.account.Account;
 import se.osoco.domain.accounting.Daybook;
 import se.osoco.domain.accounting.GeneralLedger;
@@ -18,7 +19,7 @@ public class GeneralLedgerTest {
         Daybook daybook = new Daybook(importedSIE);
         GeneralLedger generalLedger = daybook.ledger();
         Account account = generalLedger.account(8910);
-        Assert.assertEquals(8910, account.number());
-        Assert.assertEquals(new BigDecimal("148846.00"), account.lastYear().value());
+        Assertions.assertEquals(8910, account.number());
+        Assertions.assertEquals(new BigDecimal("148846.00"), account.lastYear().value());
     }
 }

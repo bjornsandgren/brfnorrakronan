@@ -1,6 +1,5 @@
 package se.osoco.sie.legacy;
 
-import org.junit.Test;
 import se.osoco.domain.*;
 import se.osoco.domain.account.Account;
 import se.osoco.domain.account.AccountMetaData;
@@ -11,8 +10,10 @@ import se.osoco.domain.reports.AccountGroupBalance;
 import java.math.BigDecimal;
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Test;
 
 public class SIE4Test {
 

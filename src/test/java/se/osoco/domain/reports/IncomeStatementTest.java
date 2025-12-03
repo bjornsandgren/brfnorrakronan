@@ -1,6 +1,7 @@
 package se.osoco.domain.reports;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
 import se.osoco.domain.Client;
 import se.osoco.domain.OrganisationNumber;
 import se.osoco.domain.Transaction;
