@@ -1,19 +1,14 @@
 package se.osoco.api;
 
-import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.core.MediaType;
-
-@Component
-@Path("/ping")
-@Produces({MediaType.APPLICATION_JSON})
+@RestController
+@RequestMapping(value = "/ping", produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
 public class PingResource {
 
-    @GET
-    @Path("/")
+    @GetMapping("/")
     public String ping() {
         return "pong";
     }
